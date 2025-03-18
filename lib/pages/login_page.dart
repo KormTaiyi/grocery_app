@@ -37,15 +37,12 @@ class LoginPage extends StatelessWidget {
                 ),
                 TextField(
                   decoration: InputDecoration(
-                    prefixIcon: Padding(
-                      padding: EdgeInsets.only(right: 10),
-                      child: CountryCodePicker(
-                        onChanged: (value) {},
-                        showCountryOnly: true,
-                        textStyle: TextStyle(fontSize: 18),
-                      ),
+                    prefixIcon: CountryCodePicker(
+                      onChanged: (value) {},
+                      showCountryOnly: true,
+                      textStyle: TextStyle(fontSize: 22),
                     ),
-                    contentPadding: EdgeInsets.only(top: 11),
+                    contentPadding: EdgeInsets.only(top: 16),
                   ),
                   style: TextStyle(fontSize: 22),
                 ),
@@ -75,7 +72,7 @@ class LoginPage extends StatelessWidget {
                           SizedBox(width: 20),
                           Text(
                             "Continue with Google",
-                            style: TextStyle(color: Colors.white, fontSize: 18),
+                            style: TextStyle(color: Colors.white, fontSize: 20),
                           ),
                         ],
                       ),
@@ -97,7 +94,7 @@ class LoginPage extends StatelessWidget {
                           SizedBox(width: 27),
                           Text(
                             "Continue with Facebook",
-                            style: TextStyle(color: Colors.white, fontSize: 18),
+                            style: TextStyle(color: Colors.white, fontSize: 20),
                           ),
                         ],
                       ),
