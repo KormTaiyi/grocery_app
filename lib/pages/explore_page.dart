@@ -10,6 +10,19 @@ class ExplorePage extends StatefulWidget {
 class _ExplorePageState extends State<ExplorePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          "Find Product",
+          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+        ),
+      ),
+      body: Column(
+        children: [
+          SearchBar(
+          )
+        ],
+      ),
+    );
   }
 }

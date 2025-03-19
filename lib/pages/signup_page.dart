@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:grocery_store/pages/login_page.dart';
-import 'package:grocery_store/pages/main_page.dart';
 
 class SignupPage extends StatelessWidget {
   const SignupPage({super.key});
@@ -70,10 +69,10 @@ class SignupPage extends StatelessWidget {
                 SizedBox(height: 20),
                 ElevatedButton(
                   onPressed: () {
-                    Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(builder: (context) => MainPage()),
-                    );
+                    // Navigator.pushReplacement(
+                    //   context,
+                    //   MaterialPageRoute(builder: (context) => MainPage()),
+                    // );
                   },
                   style: ElevatedButton.styleFrom(
                     minimumSize: Size(double.infinity, 70),

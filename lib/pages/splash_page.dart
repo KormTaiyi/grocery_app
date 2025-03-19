@@ -4,21 +4,28 @@ import 'package:grocery_store/pages/login_page.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
-  final String splashImage = "assets/icons/splash_screen_icon.svg";
 
   @override
   State<SplashPage> createState() => _SplashPageState();
 }
 
 class _SplashPageState extends State<SplashPage> {
+  final String splashImage = "assets/icons/splash_screen_icon.svg";
+
   @override
   void initState() {
     super.initState();
-    Future.delayed(Duration(seconds: 2), () {
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(builder: (context) => LoginPage()),
-      );
+    
+    // Ensuring navigation happens after the first frame
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      Future.delayed(Duration(seconds: 2), () {
+        if (mounted) {
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(builder: (context) => LoginPage()),
+          );
+        }
+      });
     });
   }
 
@@ -26,7 +33,7 @@ class _SplashPageState extends State<SplashPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.green,
-      body: Center(child: SvgPicture.asset(widget.splashImage)),
+      body: Center(child: SvgPicture.asset(splashImage)),
     );
   }
 }
