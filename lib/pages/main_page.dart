@@ -4,6 +4,7 @@ import 'package:grocery_store/pages/account_page.dart';
 import 'package:grocery_store/pages/cart_page.dart';
 import 'package:grocery_store/pages/explore_page.dart';
 import 'package:grocery_store/pages/favorite_page.dart';
+import 'package:grocery_store/pages/home_page.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
@@ -15,7 +16,7 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   static int currentIndex = 0;
   final List<Widget> _page =[
-    MainPage(),
+    HomePage(),
     ExplorePage(),
     CartPage(),
     FavoritePage(),
