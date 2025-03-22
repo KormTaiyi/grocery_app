@@ -17,8 +17,22 @@ class _ExplorePageState extends State<ExplorePage> {
           style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
         ),
       ),
-      body: Column(children: [
-        
+      body: Column(
+        children: [
+          Expanded(
+            child: GridView.builder(
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+              ),
+              itemBuilder: (context, index) {
+                return Container(
+                  width: 100,
+                  height: 120,
+                  decoration: BoxDecoration(),
+                );
+              },
+            ),
+          ),
         ],
       ),
     );
